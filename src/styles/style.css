@@ -1,0 +1,38 @@
+:root {
+  /* farver */
+  --faded_green: rgb(250, 250, 250);
+  --light_grey: rgb(240, 238, 234);
+  --white: rgb(255, 255, 255);
+
+  --light_green: rgb(140, 160, 149);
+  --dark_green: rgb(81, 95, 88);
+
+  --red: rgb(233, 75, 39);
+
+  --blue: rgb(61, 92, 110);
+
+  /* typography 
+  --font-size-h1-mobil: 0.7rem;
+  --font-size-h2-mobil: 0.8rem;
+  --font-size-h3-mobil: 1.5rem;
+  --font-size-h4-mobil: 1.3rem;
+  --font-size-p-mobil: 1rem;
+
+  --font-size-h1-desk: 1.5rem;
+  --font-size-h1-desk-index: 1rem;
+  --font-size-h2-desk: 1.5rem;
+  --font-size-h3-desk: 1.7rem;
+  --font-size-h4-desk: 2rem;
+  --font-size-p-desk: 1.5rem;
+*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
