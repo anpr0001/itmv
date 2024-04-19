@@ -1,24 +1,37 @@
 ---
-
+import Menu from "../components/Menu.astro";
+import HvorHvorfor from "../components/HvorHvorfor.astro";
+import HvorHvorfor2 from "../components/HvorHvorfor2.astro";
+import "../styles/style.css";
 ---
 
-<html lang="en">
+<html lang="da">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="robots" content="noindex,nofollow" />
     <title>Astro</title>
   </head>
   <body>
-    <h1>Astro</h1>
-
     <!-------------------- header ------------------->
-
+    <Menu />
     <!-------- vores repair service + knap ---------->
+    <h2 class="h2">VORES REPAIR SERVICE</h2>
+    <HvorHvorfor gif="../hvorfor.gif" hv_sp="Hvorfor os?" trad="../trad_1.png" p_svar="Styrk din virksomheds ESG-mål. Gør genanvendelse let og tilgængeligt for dine medarbejdere. Støt ITMVs arbejde for flere lønnede timer til syersker." />
+    <HvorHvorfor2 trad="../trad_2.png" gif="../hvad.gif" hv_sp="Hvad tilbyder vi?" p_svar="Tilpasning, fornyelse og broderi m.m. af tøj til din virksomheds medarbejdere. Vores team vil sidde klar ved symaskinenerne til at hjælpe.  " />
+    <HvorHvorfor gif="../hvor.gif" hv_sp="Hvorhenne?" trad="../trad_1.png" p_svar="Vi kommer ud til din virksomhed med vores repair service. (Københavnsområdet, tilgængeligt med offentlig transport)" />
+    <HvorHvorfor2 trad="../trad_2.png" gif="../hvornar.gif" hv_sp="Hvornår?" p_svar="Vi aftaler en fast dag f.eks. hver anden uge eller en gang om måneden. Du afleverer tøj om morgenen og henter det samme dag når arbejdsdagen er slut.  " />
+    <div class="hv_container">
+      <div class="hv_button">
+        <img src="../trad_3.png" alt="" />
+        <button>button</button>
+        <img src="../trad_4.png" alt="" />
+      </div>
+    </div>
 
     <!----------- repair team (billeder) ------------>
-
     <!-------------------- video -------------------->
     <video class="video" src="http://elinacreatives.dk/kea/09_indhold/itmv_video_v7.mp4" controls class="video"></video>
 
@@ -31,3 +44,18 @@
     <!-------------------- footer ------------------->
   </body>
 </html>
+
+<style>
+  .hv_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hv_button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5%;
+  }
+</style>

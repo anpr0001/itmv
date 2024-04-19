@@ -2,7 +2,7 @@
   /* farver */
   --faded_green: rgb(250, 250, 250);
   --light_grey: rgb(240, 238, 234);
-  --white: rgb(255, 255, 255);
+  --white: rgb(250, 250, 250, 1);
 
   --light_green: rgb(140, 160, 149);
   --dark_green: rgb(81, 95, 88);
@@ -25,6 +25,7 @@
   --font-size-h4-desk: 2rem;
   --font-size-p-desk: 1.5rem;
 */
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -35,4 +36,10 @@
 
 img {
   max-width: 100%;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding-bottom: 5%;
+  text-align: center;
 }

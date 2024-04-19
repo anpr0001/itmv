@@ -1,0 +1,41 @@
+---
+const { gif, trad, hv_sp, p_svar } = Astro.props;
+---
+
+<div class="layout">
+  <img src={gif} alt="img" class="gif_1" />
+  <!-- <img src="hvorfor.gif" alt="Animated GIF" class="gif_1" /> -->
+  <img src={trad} alt="img" class="trad_1" />
+  <!-- <img src="trad_1.png" alt="" class="trad_1" /> -->
+</div>
+<h3 class="hv">{hv_sp}</h3>
+<!-- <h3 class="hv">Hvorfor os</h3> -->
+<p class="p_width">{p_svar}</p>
+<!-- <p class="p_width">Styrk din virksomheds ESG-mål. Gør genanvendelse let og tilgængeligt for dine medarbejdere. Støt ITMVs arbejde for flere lønnede timer til syersker.</p> -->
+
+<style>
+  .rep_service {
+    text-align: center;
+  }
+
+  .layout {
+    display: flex;
+  }
+  .gif_1 {
+    flex: 0.5; /* Take remaining space */
+    padding: 10% 0 0 30%;
+  }
+
+  .trad_1 {
+    width: 20%; /* Cover 50% of the container */
+  }
+
+  .hv {
+    padding-top: 5%;
+    text-align: center;
+  }
+  .p_width {
+    padding: 5% 10% 10% 10%;
+    text-align: left;
+  }
+</style>
