@@ -1,5 +1,5 @@
 ---
-const { pakNavn, pakDesc } = Astro.props;
+const { pakNavn, pakDesc, pakDesc_2, pakDesc_3 } = Astro.props;
 ---
 
 <details>
@@ -8,7 +8,7 @@ const { pakNavn, pakDesc } = Astro.props;
   </summary>
 </details>
 <div role="definition" id="pure-css" class="content">
-  <p>{pakDesc}</p>
+  <p>{pakDesc}<br />{pakDesc_2}<br />{pakDesc_3}</p>
 </div>
 
 <style>
@@ -37,6 +37,7 @@ const { pakNavn, pakDesc } = Astro.props;
     font-size: 1.3rem;
     font-weight: bold;
     height: 8rem;
+    margin-bottom: 1rem;
   }
 
   span:hover {
@@ -62,6 +63,7 @@ const { pakNavn, pakDesc } = Astro.props;
     transition:
       max-height 400ms ease-out,
       border 0ms 400ms linear;
+    margin-left: 1rem;
   }
 
   details[open] + div.content {
@@ -74,5 +76,9 @@ const { pakNavn, pakDesc } = Astro.props;
   details[open] span::before {
     rotate: 90deg;
     transition: rotate 200ms ease-out;
+  }
+
+  p {
+    padding-bottom: 2.5rem;
   }
 </style>

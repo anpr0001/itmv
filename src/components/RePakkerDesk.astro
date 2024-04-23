@@ -1,5 +1,5 @@
 ---
-const { img, navn, desc } = Astro.props;
+const { img, navn, desc, desc_2, desc_3 } = Astro.props;
 ---
 
 <div>
@@ -11,7 +11,7 @@ const { img, navn, desc } = Astro.props;
   </div>
   <div class="container2">
     <div class="title_container2">
-      <p class="navn2">{desc}</p>
+      <p class="navn2">{desc}<br />{desc_2}<br />{desc_3}</p>
     </div>
   </div>
 </div>
