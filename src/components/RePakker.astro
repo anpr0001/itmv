@@ -1,0 +1,78 @@
+---
+const { pakNavn, pakDesc } = Astro.props;
+---
+
+<details>
+  <summary>
+    <span role="term" aria-details="pure-css">{pakNavn}</span>
+  </summary>
+</details>
+<div role="definition" id="pure-css" class="content">
+  <p>{pakDesc}</p>
+</div>
+
+<style>
+  details {
+    max-width: 500px;
+    overflow: hidden; /* Keep this line to prevent an odd blue outline around the element in Safari. */
+  }
+
+  summary {
+    display: block;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  span {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-image: url("pak_2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    color: var(--blue);
+    font-size: 1.3rem;
+    font-weight: bold;
+    height: 8rem;
+  }
+
+  span:hover {
+    cursor: pointer;
+  }
+
+  span::before {
+    content: "►";
+    font-size: 1.5rem;
+    display: flex;
+    align-items: end;
+    align-content: end;
+    padding: 0 10%;
+    transition: rotate 200ms 400ms ease-out;
+  }
+
+  div.content {
+    box-sizing: border-box;
+    max-width: 500px;
+    max-height: 0;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition:
+      max-height 400ms ease-out,
+      border 0ms 400ms linear;
+  }
+
+  details[open] + div.content {
+    max-height: 800px;
+    transition:
+      max-height 400ms ease-out,
+      border 0ms linear;
+  }
+
+  details[open] span::before {
+    rotate: 90deg;
+    transition: rotate 200ms ease-out;
+  }
+</style>

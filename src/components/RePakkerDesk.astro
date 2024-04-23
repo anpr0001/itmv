@@ -1,0 +1,101 @@
+---
+const { img, navn, desc } = Astro.props;
+---
+
+<div>
+  <div class="container">
+    <img src={img} alt="img" class="img_con" />
+    <div class="title_container">
+      <p class="navn">{navn}</p>
+    </div>
+  </div>
+  <div class="container2">
+    <div class="title_container2">
+      <p class="navn2">{desc}</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .container {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr;
+    padding: 5% 5% 0 5%;
+  }
+
+  .container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    grid-column: 1/4;
+    grid-row: 1/4;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .title_container {
+    text-align: center;
+    z-index: 1;
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    display: grid;
+    place-items: center;
+  }
+
+  .navn {
+    font-size: 20px;
+    color: var(--blue);
+    font-weight: bold;
+  }
+
+  .background {
+    background-color: var(--blue);
+    width: 25%;
+    padding: 0 5% 0;
+  }
+
+  .container2 {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr;
+    padding: 0 5% 0 5%;
+  }
+
+  .container2 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    grid-column: 1/4;
+    grid-row: 1/4;
+    border-radius: 8px;
+  }
+
+  .title_container2 {
+    text-align: center;
+    z-index: 1;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 3;
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 2px solid var(--light_green);
+    padding: 3%;
+  }
+
+  .navn2 {
+    font-size: 20px;
+    color: var(--blue);
+    font-weight: light;
+  }
+</style>

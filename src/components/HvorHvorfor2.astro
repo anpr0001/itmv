@@ -1,17 +1,31 @@
 ---
-const { gif, trad, hv_sp, p_svar } = Astro.props;
+const { gif, trad, hv_sp, p_svar, gif_desk, trad_desk, hv_sp_desk, p_1, p_2, p_3 } = Astro.props;
 ---
 
-<div class="layout">
-  <img src={trad} alt="img" class="trad_1" />
-  <img src={gif} alt="img" class="gif_1" />
-  <!-- <img src="hvorfor.gif" alt="Animated GIF" class="gif_1" /> -->
-  <!-- <img src="trad_1.png" alt="" class="trad_1" /> -->
+<div class="ser_mobil">
+  <div class="layout">
+    <img src={trad} alt="img" class="trad_1" />
+    <img src={gif} alt="img" class="gif_1" />
+  </div>
+  <h3 class="hv">{hv_sp}</h3>
+  <p class="p_width">{p_svar}</p>
 </div>
-<h3 class="hv">{hv_sp}</h3>
-<!-- <h3 class="hv">Hvorfor os</h3> -->
-<p class="p_width">{p_svar}</p>
-<!-- <p class="p_width">Styrk din virksomheds ESG-mål. Gør genanvendelse let og tilgængeligt for dine medarbejdere. Støt ITMVs arbejde for flere lønnede timer til syersker.</p> -->
+<div class="ser_desk">
+  <div class="lay_desk">
+    <div class="hv_p_desk">
+      <h3 class="hv_desk">{hv_sp_desk}</h3>
+      <p class="p_desk">{p_1}</p>
+      <p class="p_desk">{p_2}</p>
+      <p class="p_desk">{p_3}</p>
+    </div>
+    <div class="gif_desk">
+      <img src={gif_desk} alt="" />
+    </div>
+  </div>
+  <div class="trad_desk">
+    <img src={trad_desk} alt="" />
+  </div>
+</div>
 
 <style>
   .rep_service {
@@ -22,21 +36,62 @@ const { gif, trad, hv_sp, p_svar } = Astro.props;
     display: flex;
   }
   .gif_1 {
-    flex: 0.5; /* Take remaining space */
+    flex: 0.5;
     padding: 10% 0 0 0%;
   }
 
   .trad_1 {
     width: 20%;
-    margin-left: 10%; /* Cover 50% of the container */
+    margin-left: 10%;
   }
 
   .hv {
     padding-top: 5%;
     text-align: center;
+    font-size: var(--font-h3-mobil);
   }
   .p_width {
     padding: 5% 10% 10% 10%;
     text-align: left;
+    font-size: var(--font-p-mobil);
+  }
+
+  .ser_desk {
+    display: none;
+  }
+  @media screen and (min-width: 800px) {
+    .ser_mobil {
+      display: none;
+    }
+
+    .ser_desk {
+      display: block;
+    }
+    .lay_desk {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      margin: 0 3%;
+    }
+    .hv_p_desk {
+      padding: 5% 0 10% 40%;
+      align-items: end;
+    }
+
+    .hv_desk {
+      padding: 0 5% 5% 0;
+      text-align: right;
+      font-size: var(--font-h3-desk);
+    }
+    .p_desk {
+      font-size: var(--font-p-desk);
+    }
+    .gif_desk {
+      padding-left: 20%;
+    }
+
+    .trad_desk {
+      max-width: 100%;
+      padding: 0 20%;
+    }
   }
 </style>

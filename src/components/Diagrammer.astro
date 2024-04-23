@@ -1,0 +1,75 @@
+---
+
+---
+
+<div class="diagrammer">
+  <div class="row">
+    <div class="item">
+      <img src="100.png" alt="" />
+      <p class="p1">Af praktikanterne har været tilfredse med forløbet.</p>
+    </div>
+    <div class="item">
+      <img src="46.png" alt="" />
+      <p class="p">Af praktikanterne har haft glæde af at være en del af et arbejdsfællesskab.</p>
+    </div>
+  </div>
+  <div class="item">
+    <img src="62.png" alt="" />
+    <p class="p">Af praktikanterne har lært mere om bæredygtighed og genanvendelse af tekstil.</p>
+  </div>
+</div>
+
+<style>
+  .diagrammer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 0 5% 20%;
+  }
+
+  .item p {
+    margin-top: 5%;
+  }
+  .p1 {
+    padding: 0 0 15% 0;
+  }
+  .p {
+    padding: 0 10% 15% 0;
+  }
+  @media screen and (min-width: 800px) {
+    .diagrammer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 5% 0;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5%;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .item img {
+      max-width: 100%;
+    }
+
+    .item p {
+      margin-top: 5%;
+    }
+    .p1 {
+      padding: 0 10%;
+    }
+    .p {
+      padding: 0 20%;
+    }
+  }
+</style>

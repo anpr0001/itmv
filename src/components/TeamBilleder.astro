@@ -1,0 +1,51 @@
+---
+const { img, navn, prof } = Astro.props;
+---
+
+<div class="container">
+  <img src={img} alt="img" class="img_con" />
+  <div class="title_container">
+    <p class="navn">{navn}</p>
+    <p class="prof">{prof}</p>
+  </div>
+</div>
+
+<style>
+  .container {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr;
+    padding: 5%;
+  }
+
+  .container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    grid-column: 1/4;
+    grid-row: 1/4;
+  }
+
+  .title_container {
+    text-align: center;
+    z-index: 1;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    display: grid;
+    place-items: center;
+    padding-top: 35%;
+  }
+
+  .navn {
+    font-size: 20px;
+    color: var(--blue);
+    font-weight: bold;
+  }
+
+  .prof {
+    font-size: 20px;
+    color: var(--blue);
+  }
+</style>

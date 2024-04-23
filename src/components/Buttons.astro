@@ -1,0 +1,59 @@
+---
+const { buttons_indhold } = Astro.props;
+---
+
+<div class="but_cont">
+  <button class="button">{buttons_indhold}</button>
+</div>
+<style>
+  .button {
+    width: 220px;
+    height: 60px;
+    background-color: var(--dark_green);
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: lighter;
+    text-align: center;
+    cursor: pointer;
+    transition:
+      border-color 0.5s ease,
+      background-color 0.5s ease,
+      color 0.5s ease;
+  }
+
+  .button:hover {
+    border: 2px solid var(--dark_green);
+    background-color: var(--white);
+    color: var(--dark_green);
+  }
+
+  .but_cont {
+    padding: 10% 1%;
+  }
+
+  @media screen and (min-width: 800px) {
+    .button {
+      width: 280px;
+      height: 70px;
+      background-color: var(--dark_green);
+      border: none;
+      border-radius: 5px;
+      color: var(--white);
+      font-size: 22px;
+      font-weight: lighter;
+      text-align: center;
+      cursor: pointer;
+      transition:
+        border-color 0.5s ease,
+        background-color 0.5s ease,
+        color 0.5s ease;
+    }
+
+    .but_cont {
+      padding: 0;
+      justify-content: center;
+    }
+  }
+</style>

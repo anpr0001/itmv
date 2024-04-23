@@ -1,7 +1,14 @@
 ---
 import Menu from "../components/Menu.astro";
+import TeamBilleder from "../components/TeamBilleder.astro";
+import RePakker from "../components/RePakker.astro";
+import RePakkerDesk from "../components/RePakkerDesk.astro";
+import Buttons from "../components/Buttons.astro";
+import Diagrammer from "../components/Diagrammer.astro";
+import Citat from "../components/Citat.astro";
 import HvorHvorfor from "../components/HvorHvorfor.astro";
 import HvorHvorfor2 from "../components/HvorHvorfor2.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/style.css";
 ---
 
@@ -19,43 +26,251 @@ import "../styles/style.css";
     <Menu />
     <!-------- vores repair service + knap ---------->
     <h2 class="h2">VORES REPAIR SERVICE</h2>
-    <HvorHvorfor gif="../hvorfor.gif" hv_sp="Hvorfor os?" trad="../trad_1.png" p_svar="Styrk din virksomheds ESG-mål. Gør genanvendelse let og tilgængeligt for dine medarbejdere. Støt ITMVs arbejde for flere lønnede timer til syersker." />
-    <HvorHvorfor2 trad="../trad_2.png" gif="../hvad.gif" hv_sp="Hvad tilbyder vi?" p_svar="Tilpasning, fornyelse og broderi m.m. af tøj til din virksomheds medarbejdere. Vores team vil sidde klar ved symaskinenerne til at hjælpe.  " />
-    <HvorHvorfor gif="../hvor.gif" hv_sp="Hvorhenne?" trad="../trad_1.png" p_svar="Vi kommer ud til din virksomhed med vores repair service. (Københavnsområdet, tilgængeligt med offentlig transport)" />
-    <HvorHvorfor2 trad="../trad_2.png" gif="../hvornar.gif" hv_sp="Hvornår?" p_svar="Vi aftaler en fast dag f.eks. hver anden uge eller en gang om måneden. Du afleverer tøj om morgenen og henter det samme dag når arbejdsdagen er slut.  " />
-    <div class="hv_container">
-      <div class="hv_button">
-        <img src="../trad_3.png" alt="" />
-        <button>button</button>
-        <img src="../trad_4.png" alt="" />
+    <div class="mobil">
+      <HvorHvorfor gif="../hvorfor.gif" hv_sp="Hvorfor os?" trad="../trad_1.png" p_svar="Styrk din virksomheds ESG-mål. Gør genanvendelse let og tilgængeligt for dine medarbejdere. Støt ITMVs arbejde for flere lønnede timer til syersker." />
+      <HvorHvorfor2 trad="../trad_2.png" gif="../hvad.gif" hv_sp="Hvad tilbyder vi?" p_svar="Tilpasning, fornyelse og broderi m.m. af tøj til din virksomheds medarbejdere. Vores team vil sidde klar ved symaskinenerne til at hjælpe.  " />
+      <HvorHvorfor gif="../hvor.gif" hv_sp="Hvorhenne?" trad="../trad_1.png" p_svar="Vi kommer ud til din virksomhed med vores repair service. (Københavnsområdet, tilgængeligt med offentlig transport)" />
+      <HvorHvorfor2 trad="../trad_2.png" gif="../hvornar.gif" hv_sp="Hvornår?" p_svar="Vi aftaler en fast dag f.eks. hver anden uge eller en gang om måneden. Du afleverer tøj om morgenen og henter det samme dag når arbejdsdagen er slut.  " />
+      <div class="hv_container">
+        <div class="hv_button">
+          <img src="../trad_3.png" alt="" />
+          <Buttons buttons_indhold="Bestil repair team her" />
+          <img src="../trad_4.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="desktop">
+      <div class="trad1_desk">
+        <img src="trad1_desk.png" alt="" class="trad1_desk" />
+      </div>
+      <HvorHvorfor
+        gif_desk="../hvorfor.gif"
+        hv_sp_desk="Hvorfor os?"
+        trad_desk="../trad2_desk.png"
+        p_1="Styrk din virksomheds ESG-mål"
+        p_2="Gør genanvendelse let og tilgængeligt for dine medarbejdere."
+        p_3="Støt ITMVs arbejde for flere lønnede timer til syersker."
+      />
+      <HvorHvorfor2
+        gif_desk="../hvad.gif"
+        hv_sp_desk="Hvad tilbyder vi?"
+        p_1="Tilpasning, fornyelse og broderi m.m. af tøj til din"
+        p_2="virksomheds medarbejdere. Vores team vil sidde klar "
+        p_3="ved symaskinenerne til at hjælpe."
+        trad_desk=" ../trad3_desk.png"
+      />
+      <HvorHvorfor gif_desk="../hvor.gif" hv_sp_desk="Hvorhenne?" trad_desk="../trad2_desk.png" p_1="Vi kommer ud til din virksomhed med vores repair service." p_2="(Københavnsområdet, tilgængeligt med offentlig transport)" />
+      <HvorHvorfor2
+        gif_desk="../hvornar.gif"
+        hv_sp_desk="Hvornår?"
+        p_1="Vi aftaler en fast dag f.eks. hver anden uge eller en gang om  "
+        p_2="måneden. Du afleverer tøj om morgenen og henter det"
+        p_3="samme dag når arbejdsdagen er slut."
+        trad_desk=" ../trad3_desk.png"
+      />
+      <div class="hv_container_desk">
+        <div class="hv_button_desk">
+          <Buttons buttons_indhold="Bestil repair team her" />
+        </div>
+        <img src="../trad4_desk.png" alt="" class="trad4_desk" />
       </div>
     </div>
 
     <!----------- repair team (billeder) ------------>
+    <h2 class="h2">VORES REPAIR TEAM</h2>
+    <div class="bil_cont">
+      <TeamBilleder img="../ira.png" navn="IRA" prof="Syerske" />
+      <TeamBilleder img="../luna.png" navn="LUNA" prof="Designassistent" />
+      <TeamBilleder img="../olena.png" navn="OLENA" prof="Syerske" />
+    </div>
     <!-------------------- video -------------------->
-    <video class="video" src="http://elinacreatives.dk/kea/09_indhold/itmv_video_v7.mp4" controls class="video"></video>
+    <!-- <video class="video" src="http://elinacreatives.dk/kea/09_indhold/itmv_video_v7.mp4" controls class="video"></video> -->
 
     <!------------ rep. pakker + knapper ------------>
+    <div class="hv_container">
+      <div class="hv_button">
+        <img src="../trad_3.png" alt="" />
+      </div>
+    </div>
+    <h2 class="h2 h2_pakker">REPARATIONSPAKKER</h2>
+    <div class="background">
+      <div class="bil_cont cont_pak pak_mobil">
+        <RePakker
+          pak="../pak.png"
+          pakNavn="DEN ENKLE"
+          pakDesc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac semper urna. Integer eu semper odio. In ultricies augue non ex lobortis, sit amet molestie nunc malesuada. Sed ac est nec lacus fermentum fringilla. Vivamus dignissim ipsum vitae erat consectetur, non cursus nisl convallis. Sed condimentum vehicula odio, at luctus urna dignissim eu. Cras bibendum nisi ut orci malesuada, vel fermentum lacus sodales. Vivamus malesuada sapien eu efficitur ullamcorper. "
+        />
+        <RePakker pak="../pak.png" pakNavn="DEN MÅNEDLIGE 1/2 ÅR" />
+        <RePakker pak="../pak.png" pakNavn="DEN MÅNEDLIGE 1 ÅR" />
+        <RePakker pak="../pak.png" pakNavn="DEN KVARTALE" />
+        <RePakker pak="../pak.png" pakNavn="DEN KONTINUERLIGE" />
+        <RePakker pak="../pak.png" pakNavn="DEN INTENSIVE" />
+      </div>
+      <div class="pak_desktop">
+        <RePakkerDesk img="../pak_2.png" navn="DEN ENKLE" desc=" 3 personer pr. gang.Pris: 5400 kr. ex moms" />
+        <RePakkerDesk img="../pak_2.png" navn="DEN MÅNEDLIGE 1/2 ÅR" desc="kjhkjgjkgkg" />
+        <RePakkerDesk img="../pak_2.png" navn="DEN MÅNEDLIGE 1 ÅR" desc="kjhkjgjkgkg" />
+        <RePakkerDesk img="../pak_2.png" navn="DEN KVARTALE" desc="kjhkjgjkgkg" />
+        <RePakkerDesk img="../pak_2.png" navn="DEN KONTINUERLIGE" desc="kjhkjgjkgkg" />
+        <RePakkerDesk img="../pak_2.png" navn="DEN INTENSIVE" desc="kjhkjgjkgkg" />
+      </div>
+      <div class="but_2">
+        <Buttons buttons_indhold="Bestil repair team her" class="but_pad" />
+        <Buttons buttons_indhold="Donér til ITMV" class="but_pad" />
+      </div>
+    </div>
 
     <!----------- samarbejde + diagrammer ----------->
+    <div class="diagrammer">
+      <img src="../trad_4.png" alt="" class="trad_forskel" />
+      <h2 class="h2">DIT SAMARBEJDE GØR EN FORSKEL</h2>
+      <Diagrammer />
+      <!--------- citater fra virksomheder ------------>
+      <div class="diagrammer">
+        <img src="../trad_3.png" alt="" class="trad_forskel" />
+        <h2 class="h2">HVAD SIGER VORES KUNDER</h2>
+        <Citat />
+        <img src="hjerte.png" alt="" class="hjerte" />
+      </div>
+      <!-------------------- footer ------------------->
+      <Footer>
+        <style>
+          .hv_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
 
-    <!--------- citater fra virksomheder ------------>
+          .hv_button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 5%;
+          }
 
-    <!-------------------- footer ------------------->
+          .hv_container_desk {
+            display: none;
+          }
+
+          .bil_cont {
+            padding: 10% 0 5% 0;
+            background-color: var(--light_grey);
+          }
+
+          .background {
+            background-color: var(--light_grey);
+            padding-bottom: 5%;
+          }
+          .h2_pakker {
+            padding-top: 15%;
+          }
+          .cont_pak {
+            padding: 10% 5%;
+          }
+
+          .but_2 {
+            display: flex;
+            justify-content: center;
+          }
+
+          .desktop {
+            display: none;
+          }
+
+          .h2 {
+            padding-top: 3%;
+            font-size: var(--font-h2-mobil);
+          }
+
+          .pak_desktop {
+            display: none;
+          }
+
+          .diagrammer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .trad_forskel {
+            padding-top: 5%;
+          }
+
+          .hjerte {
+            padding: 0 20% 10% 0;
+          }
+          @media screen and (min-width: 800px) {
+            .mobil {
+              display: none;
+            }
+
+            .desktop {
+              display: block;
+            }
+
+            .h2 {
+              font-size: var(--font-h2-desk);
+            }
+
+            .trad1_desk {
+              padding: 0 0 2% 12%;
+              max-width: 70%;
+            }
+
+            .trad4_desk {
+              max-width: 30%;
+              margin-left: 20%;
+            }
+
+            .hv_container {
+              display: none;
+            }
+            .hv_button {
+              display: none;
+            }
+            .hv_container_desk {
+              display: block;
+            }
+            .hv_button_desk {
+              display: flex;
+              flex-direction: column;
+              padding: 0 0 5% 10%;
+            }
+
+            .bil_cont {
+              display: flex;
+              padding: 0;
+            }
+
+            .cont_pak {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr 1fr;
+              padding: 5%;
+            }
+
+            .pak_mobil {
+              display: none;
+            }
+
+            .but_2 {
+              display: flex;
+              justify-content: space-around;
+              margin: 0 10%;
+            }
+
+            .pak_desktop {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              padding: 5%;
+            }
+
+            .hjerte {
+              padding: 0 10% 10% 0;
+            }
+          }
+        </style>
+      </Footer>
+    </div>
   </body>
 </html>
-
-<style>
-  .hv_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .hv_button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 5%;
-  }
-</style>

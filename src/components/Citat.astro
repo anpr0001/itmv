@@ -1,0 +1,91 @@
+---
+
+---
+
+<div class="citater_mobil">
+  <div class="row">
+    <div class="item">
+      <p class="p1">“Vi er vilde med konceptet med Repair Service, der på alle parametre taler direkte ind i vores arbejde”</p>
+      <p class="p_italic">Sanne Kjær, Kundedirektør KAB</p>
+    </div>
+    <div class="item">
+      <p class="p">”Det er helt fantastisk, en af de bedste personalegoder jeg har oplevet i KAB. Den rammer lige ind i bæredygtighedsdagsordenen, og gør det enormt nemt.”</p>
+      <p class="p_italic">Jonas Mørch Cohen, Kundechef KAB</p>
+    </div>
+  </div>
+  <div class="item">
+    <p class="p">Jeg er glad for at kunne hjælpe de to syerske, der har siddet i KAB-Huset med at få foden ind på arbejdsmarkedet og blive en del af et socialt og forpligtende fællesskab.</p>
+    <p class="p_italic">Mark Petterson, Digital redaktør KAB</p>
+  </div>
+</div>
+
+<div class="citater_desk">
+  <div class="item1">
+    <p class="p">“Vi er vilde med konceptet med Repair Service, der på alle parametre taler direkte ind i vores arbejde”</p>
+    <p class="p_italic">Sanne Kjær, Kundedirektør KAB</p>
+  </div>
+  <div class="item2">
+    <p class="p">”Det er helt fantastisk, en af de bedste personalegoder jeg har oplevet i KAB. Den rammer lige ind i bæredygtighedsdagsordenen, og gør det enormt nemt.”</p>
+    <p class="p_italic">Jonas Mørch Cohen, Kundechef KAB</p>
+  </div>
+  <div class="item3">
+    <p class="p">Jeg er glad for at kunne hjælpe de to syerske, der har siddet i KAB-Huset med at få foden ind på arbejdsmarkedet og blive en del af et socialt og forpligtende fællesskab.</p>
+    <p class="p_italic">Mark Petterson, Digital redaktør KAB</p>
+  </div>
+
+  <style>
+    .citater_desk {
+      display: none;
+    }
+    .citater_mobil {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 5% 10% 0 10%;
+    }
+
+    .item p {
+      margin-top: 3%;
+    }
+    .p1 {
+      padding: 0;
+    }
+    .p {
+      padding: 0;
+    }
+
+    .p_italic {
+      padding-bottom: 15%;
+      font-style: italic;
+    }
+
+    @media screen and (min-width: 800px) {
+      .citater_mobil {
+        display: none;
+      }
+
+      .citater_desk {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr 1fr;
+        padding: 3% 10% 0 10%;
+      }
+
+      .item1 {
+        grid-row: 1;
+        grid-column: 1;
+      }
+
+      .item2 {
+        grid-row: 2;
+        grid-column: 2;
+      }
+
+      .item3 {
+        grid-row: 3;
+        grid-column: 1;
+      }
+    }
+  </style>
+</div>
