@@ -5,26 +5,87 @@
 <div class="container">
   <div>
     <p class="stor">VÆRKSTEDER</p>
-    <p class="sm">Lundtoftegade 23, 1 sal 2200 København N</p>
-    <p class="sm">Nygårdterasserne 213A 3520 Farum</p>
+    <p class="sm">Lundtoftegade 23, 1 sal<br />2200 København N</p>
+    <p class="sm">Nygårdterasserne 213A<br />3520 Farum</p>
+  </div>
+
+  <div class="contact">
+    <p class="stor">KONTAKT</p>
+    <p class="sm">Mail: itmv@itmv.dk</p>
+    <p class="sm">Telefon: +45 60877307</p>
+    <p class="sm">CVR: 34449686</p>
+    <div class="logos">
+      <img src="fac.png" alt="" />
+      <img src="insta.png" alt="" />
+      <img src="linkd.png" alt="" />
+    </div>
   </div>
 
   <div>
-    <p class="stor">KONTAKT</p>
-    <p class="sm">Mail: itmv@itmv.dk Telefon: +45 60877307 CVR: 34449686</p>
-    <img src="fac.png" alt="" />
-    <img src="insta.png" alt="" />
-    <img src="linkd.png" alt="" />
+    <p class="stor">NYHEDSBREV</p>
+    <form>
+      <input type="text" placeholder="Dit navn" />
+      <input type="email" placeholder="Din email" />
+      <button>Tilmeld dig</button>
+    </form>
   </div>
 </div>
 
 <style>
   .container {
     background-color: var(--blue);
+    display: grid;
+    gap: 3rem;
+    padding: 2rem;
+    justify-content: center;
   }
-
+  .container > div:not(.contact) p {
+    margin-bottom: 0.5rem;
+  }
+  .container > div {
+    max-width: 300px;
+  }
   .stor,
   .sm {
     color: var(--white);
+    line-height: 1.3rem;
+  }
+  .stor {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  .logos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  form > * {
+    border-radius: 8px;
+    border: none;
+    padding: 0.5rem 1rem;
+  }
+  input {
+    /* padding: 0.5rem 1rem; */
+  }
+  form button {
+    margin-top: 10px;
+    background-color: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+    /* padding: 0.5rem 1rem; */
+    align-self: flex-start;
+    padding: 0.5rem 3rem;
+  }
+  @media screen and (min-width: 800px) {
+    .container {
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+    }
   }
 </style>
